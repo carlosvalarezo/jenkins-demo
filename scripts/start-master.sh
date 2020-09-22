@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo "📦 installing packages"
-apt-get update
-apt-get install -qy apt-transport-https && \
+sudo apt-get update
+sudo apt-get install -qy apt-transport-https && \
         curl && \
         docker.io && \
         git
