@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'HI' $MASTER_NODE
+                sh echo 'HI' $MASTER_NODE
             }
         }
     }
