@@ -2,8 +2,6 @@
 echo "😺 creating k8s master"
 sudo source /home/ubuntu/scripts/env.sh
 
-sudo hostnamectl set-hostname k8s-master
-
 JOIN=$(kubeadm init --pod-network-cidr=10.244.0.0/16)
 
 sudo echo $JOIN > /etc/kubernetes/join.conf
