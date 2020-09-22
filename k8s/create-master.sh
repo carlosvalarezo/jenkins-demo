@@ -8,7 +8,7 @@ JOIN=$(kubeadm init --pod-network-cidr=10.244.0.0/16)
 
 echo $JOIN > /etc/kubernetes/join.conf
 
-scp -i /home/ubuntu/certs/aws_k8s.pem /etc/kubernetes/join.conf $USERNAME@$WORKER_NODE:/home/ubuntu/worker_node/join.conf
+scp -i /home/ubuntu/certs/aws_k8s.pem /etc/kubernetes/join.conf $EC2_USER@$WORKER_NODE:/home/ubuntu/worker_node/join.conf
 
 export KUBECONFIG=/etc/kubernetes/admin.conf
 
