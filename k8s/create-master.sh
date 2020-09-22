@@ -3,8 +3,7 @@ echo "😺 creating k8s master"
 hostnamectl set-hostname k8s-master
 JOIN=$(kubeadm init --pod-network-cidr=10.244.0.0/16)
 echo $JOIN > /etc/kubernetes/join.conf
-WORKER_NODE=$WORKER_NODE
-scp -i /home/ubuntu/certs/aws_k8s.pem /etc/kubernetes/join.conf $WORKER_NODE:/home/ubuntu/worker_node/join.conf
+scp -i /home/ubuntu/certs/aws_k8s.pem /etc/kubernetes/join.conf $USERNAME@$MASTER_NODE:/home/ubuntu/worker_node/join.conf
 export KUBECONFIG=/etc/kubernetes/admin.conf
 kubectl apply -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml
 mkdir -p $HOME/.kube
