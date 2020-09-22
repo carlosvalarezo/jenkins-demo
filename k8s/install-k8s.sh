@@ -1,11 +1,5 @@
 #!/bin/bash
 
-echo "🤓installing support packages & docker"
-apt-get update
-apt-get install -y apt-transport-https \
-        curl \
-        docker.io
-
 echo "🐳 setting up docker"
 systemctl enable docker
 systemctl status docker
