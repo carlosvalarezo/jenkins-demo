@@ -9,6 +9,5 @@ apt-get install -qy apt-transport-https && \
 
 echo "😸 pulling code"
 git clone https://github.com/carlosvalarezo/demo-opa.git
-cd
 ./demo-opa/k8s/install-k8s.sh
 ./demo-opa/k8s/create-master.sh
