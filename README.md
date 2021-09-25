@@ -1,4 +1,4 @@
-# demo-opa
+# jenkins-demo
 
 1. Install jenkins locally with docker:
 ```
